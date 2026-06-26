@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="registration-container">
+        
+        <div class="header-titles">
+            <h2>Student Registration</h2>
+            <p>Fill in the details below to create your student account</p>
+        </div>
+
+        <div class="step-circles">
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+            <span class="step-text" id="stepText">Step 1 of 4</span>
+        </div>
+
+        <form id="studentForm">
+            
+            <div class="page active" id="page1">
+                <h3 class="section-title">Personal information</h3>
+                
+                <div class="photo-upload-section">
+                    <div class="avatar-preview" id="avatarPreview">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <div class="upload-controls">
+                        <label for="photo" class="upload-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                            Upload photo
+                        </label>
+                        <input type="file" id="photo" accept="image/png, image/jpeg" hidden>
+                        <span class="upload-hint">JPG or PNG, optional</span>
+                    </div>
+                </div>
+
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label>First name *</label>
+                        <input type="text" id="firstName" placeholder="Hansika" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Last name *</label>
+                        <input type="text" id="lastName" placeholder="Gupta" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Date of birth *</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Gender *</label>
+                        <select id="gender" required>
+                            <option value="">-- Select --</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="button" class="next-btn">Next — Contact info &rarr;</button>
+            </div>
+
+            <div class="page" id="page2">
+                <h3 class="section-title">Contact information</h3>
+                <div class="input-grid">
+                    <div class="input-group full-width">
+                        <label>Email address *</label>
+                        <input type="email" id="email" placeholder="student@gjust.edu" required>
+                    </div>
+                    <div class="input-group full-width">
+                        <label>Phone number *</label>
+                        <input type="tel" id="phone" placeholder="10-digit number" required>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <button type="button" class="prev-btn">&larr; Back</button>
+                    <button type="button" class="next-btn">Next — Academic info &rarr;</button>
+                </div>
+            </div>
+
+            <div class="page" id="page3">
+                <h3 class="section-title">Academic information</h3>
+                <div class="input-grid">
+                    <div class="input-group full-width">
+                        <label>Course *</label>
+                        <input type="text" id="course" placeholder="B.Tech Computer Science" required>
+                    </div>
+                    <div class="input-group full-width">
+                        <label>University *</label>
+                        <input type="text" id="university" placeholder="GJUS&T" required>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <button type="button" class="prev-btn">&larr; Back</button>
+                    <button type="button" class="next-btn">Next — Account setup &rarr;</button>
+                </div>
+            </div>
+
+            <div class="page" id="page4">
+                <h3 class="section-title">Account setup</h3>
+                <div class="input-grid">
+                    <div class="input-group full-width">
+                        <label>Password *</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="input-group full-width">
+                        <label>Confirm Password *</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <button type="button" class="prev-btn">&larr; Back</button>
+                    <button type="submit" class="submit-btn">Complete Registration &check;</button>
+                </div>
+            </div>
+        </form>
+        
+        <div id="successMessage" class="hidden">
+            <h3 style="color: #2b7deb; text-align: center;">Registration Complete!</h3>
+            <p style="text-align: center; color: #a0a0a0; margin-top: 10px;">Your student account has been created securely.</p>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>

@@ -19,3 +19,6 @@ A sleek, responsive, multi-step student registration form designed with a modern
 * **HTML5:** Semantic structure, SVG icons, and input validation attributes.
 * **CSS3:** Custom dark mode styling, CSS Grid/Flexbox layouts, and UI keyframe animations.
 * **Vanilla JavaScript:** Event handling, DOM manipulation, and paginated form logic .
+
+## Live link 
+https://hansika38.github.io/student-registration-form-/
